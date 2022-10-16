@@ -1,0 +1,13 @@
+@import "../_variables.scss";
+
+.nav {
+  padding: 10px;
+  border-bottom: 2px solid $first-light-color-1;
+}
+.nav p {
+  text-align: center;
+}
+.nav img {
+  width: 260px;
+  height: 65px;
+}

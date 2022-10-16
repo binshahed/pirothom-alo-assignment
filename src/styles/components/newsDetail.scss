@@ -1,0 +1,32 @@
+@import "../_variables.scss";
+
+.news-detail-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .news-detail-item {
+    width: 100%;
+    .news-top-section {
+      border-bottom: 1px solid $first-light-color-1;
+      margin-bottom: 30px;
+      padding: 30px;
+    }
+    .sub-head-line {
+      font-size: 1rem;
+      color: $first-light-color;
+    }
+    .news-description {
+        margin: 1.333rem;
+        padding: 0 100px;
+        @media (max-width: $tablet) {
+          padding: 0 50px;
+        }
+        @media (max-width: $mobile) {
+          padding: 0 10px;
+        }
+      }
+  }
+
+ 
+}

@@ -1,0 +1,92 @@
+@import "../../_variables.scss";
+
+.home-main-layout .tab-container {
+  border-right: 1px solid $first-light-color-1;
+  padding: 0 1rem 0 0;
+  @media (max-width: $mobile) {
+    padding: 0;
+    border-right: none;
+    margin-bottom: 30px;
+  }
+  @media (max-width: $tablet) {
+    border-right: none;
+  }
+  .content {
+    display: none;
+  }
+
+  .active-content {
+    display: flex;
+  }
+
+  .tabs-nav-container {
+    display: flex;
+    border-bottom: 1px solid $first-light-color-1;
+    .tabs-nav-item {
+      padding: 0 5px;
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .tabs-nav-item:hover {
+      --border-color: $second-color;
+      border-bottom: 3px solid $second-color;
+      margin-bottom: -1px;
+    }
+    .active-tabs-nav-item {
+      --border-color: $second-color;
+      border-bottom: 3px solid $second-color;
+      margin-bottom: -1px;
+    }
+  }
+  .tab-card {
+    list-style-type: none;
+    position: relative;
+
+    li::after {
+      content: "";
+      border-bottom: 1px solid $first-light-color-1;
+      width: 100%;
+      display: block;
+    }
+    @media (min-width: $tablet) {
+      li:last-child::after {
+        content: "";
+        border-bottom: none;
+      }
+    }
+
+    span {
+      font-size: 35px;
+      font-weight: bold;
+      color: $first-light-color;
+    }
+    p {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      span {
+        font-size: 1.2rem;
+        color: $second-color;
+      }
+      span::after {
+        content: "/";
+        margin-left: 0.2rem;
+        color: $first-light-color;
+      }
+    }
+  }
+  .add-mobile {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 14px;
+    color: $first-light-color;
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+}

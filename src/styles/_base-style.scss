@@ -1,0 +1,39 @@
+@import "./_variables.scss";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  font-family: $body-font;
+}
+
+a {
+  text-decoration: none;
+  color: $first-color;
+}
+// app container style
+.container {
+  max-width: 784px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  margin: 0 auto;
+  padding: 2rem 0.8889rem;
+  @media screen and (min-width: $desktop) {
+    max-width: 1280px;
+  }
+  @media (min-width: $tablet) {
+    max-width: 1170px;
+  }
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  span {
+    color: $second-color;
+  }
+}
+

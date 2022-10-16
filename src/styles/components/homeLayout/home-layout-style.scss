@@ -1,0 +1,50 @@
+@import "../../_variables.scss";
+
+// home layout container section
+.home-main-layout {
+  @media (min-width: ( $mobile)) {
+    display: grid;
+    grid-template-columns: 5fr 9fr;
+    grid-gap: 0.5rem;
+  }
+
+  @media (min-width: ( $desktop)) {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    grid-gap: 1rem;
+    padding-bottom: 30px;
+  }
+  @media (max-width: $tablet) {
+    border-bottom: none;
+  }
+  border-bottom: 1px solid $first-light-color-1;
+}
+
+// ad style
+.add-1-container {
+  margin: 0 0 20px 0;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid $first-light-color-1;
+  img {
+    width: 100%;
+  }
+  @media (max-width: $tablet) {
+    border-bottom: none;
+  }
+
+  .ad-1 {
+    width: 100%;
+    background-color: $first-light-color-1;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.bottom-add {
+  margin: 10px 200px;
+  @media (max-width: $tablet) {
+    margin: 10px;
+  }
+}
